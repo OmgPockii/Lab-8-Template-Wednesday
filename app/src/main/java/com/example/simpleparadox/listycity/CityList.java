@@ -70,6 +70,24 @@ public class CityList {
     }
 
     /**
+     * Duplicates the city list
+     *
+     * @param cityList
+     *      City to be duplicated
+     * @return
+     *      CityList object that is duplicated
+     */
+    public CityList duplicate(CityList cityList){
+        CityList duplicate = new CityList();
+        List<City> list = cities;
+        for(int i = 0; i < list.size(); i++){
+            duplicate.add(list.get(i));
+        }
+
+        return duplicate;
+    }
+
+    /**
      * Return the size of the city list
      * @return
      *      Size of city list
