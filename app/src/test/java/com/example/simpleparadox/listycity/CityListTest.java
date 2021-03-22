@@ -102,8 +102,7 @@ class CityListTest {
         City city = new City ("Winnipeg", "Manitoba");
         cityList1.add(city);
 
-        cityList2.duplicate(cityList1);
-
+        cityList2 = cityList2.duplicate(cityList1);
         assertEquals(2, cityList1.countCities());
         assertEquals(2, cityList2.countCities());
         assertTrue(cityList2.hasCity(city));
